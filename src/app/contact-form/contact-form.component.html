@@ -16,6 +16,10 @@
         <option value="">Contact</option>
         <option *ngFor="let method of contactMethods" [ngValue]="method">{{method.name}}</option>
     </select></div>
+    <div class="radio"><label for=""><input ngModel='contactMethod' type="radio" name="contactMethod" value="1">
+    Email</label></div>
+    <div class="radio"><label for=""><input ngModel='contactMethod' type="radio" name="contactMethod" value="2">
+        Phone</label></div>
     <p>{{f.value | json}}</p>
     <button class="btn btn-primary" [disabled]="!f.valid"
     >Submit</button>
